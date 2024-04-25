@@ -1,0 +1,227 @@
+ @media screen and (max-width:1200px) {
+ .potential-outer {
+ background-size: 100% 55%;
+}
+.estate-outer {
+ padding: 30px 0 70px;
+}
+ h2.title-outer {
+ font-size: 37px;
+}
+ .competitive-inner-right h2.title-outer {
+ line-height: 50px;
+}
+ .breath-inner {
+ padding: 0 15px;
+}
+}
+ @media screen and (max-width:991px) {
+ .banner-inner h1 {
+ font-size: 32px;
+ line-height: 46px;
+}
+ .banner-inner p {
+ font-size: 20px;
+}
+.competitive-inner-right {
+ padding: 60px 16px 0 0;
+}
+h2.title-con1 {
+ font-size: 23px;
+ line-height: 37px;
+}
+p br {
+ display:none;
+}
+h2.title-outer {
+ font-size: 30px;
+ line-height: 61px;
+}
+section.streamline-outer {
+ padding: 0 0 30px;
+}
+p {
+ font-size: 16px;
+ line-height: 23px;
+}
+.designs li {
+ display: initial;
+}
+ .designs li h2 {
+ font-size: 20px;
+ line-height: 30px;
+ margin: 35px 0 15px;
+}
+section.competitive-outer {
+ padding: 10px 0 50px;
+}
+ .bussiness-outer {
+ padding: 40px 30px 50px;
+ margin: 0 0 -70px;
+}
+ a.get-started {
+ font-size: 16px;
+}
+ .competitive-inner-right h2.title-outer {
+ line-height: 40px;
+}
+ .bussiness-outer .competitive-inner-right {
+ padding: 0 0px 0 0;
+}
+}
+ @media screen and (max-width:767px) {
+ .banner-inner h1 {
+ font-size: 28px;
+ line-height: 40px;
+}
+ .banner-inner p {
+ font-size: 18px;
+}
+.container {
+ max-width: 100%;
+}
+ .competitive-inner-left {
+ width: 100%;
+}
+.competitive-inner.reverse-con .competitive-inner-left {
+    padding: 0 0px 0 0;
+}
+.video-inner {
+ position: relative;
+ padding: 0;
+}
+ .video-inner::after {
+ display:none;
+}
+.competitive-inner-right {
+ padding: 20px 0 0 0;
+ width: 100%;
+}
+ section.breath-outer {
+ padding: 20px 10px 50px;
+}
+.breath-inner {
+ padding: 0;
+}
+.competitive-inner-left video {
+ margin: 10px 0 0;
+}
+ .designs {
+ column-count: 2;
+ margin: 50px 0 0 !important;
+}
+.designs li {
+ margin: 20px 0;
+ display: inline-block;
+ vertical-align: top;
+}
+.estate-outer {
+ padding: 30px 0 20px;
+}
+ .agent-outer {
+ padding: 30px 0 50px;
+ margin: 0 0 30px;
+}
+.review-slider::before {
+ top: -30px;
+ left: -3px;
+ width: 106px;
+ height: 106px;
+ background-size: 100% 100%;
+}
+.review-slider::after {
+ bottom: 10px;
+ right: -4px;
+ width: 112px;
+ height: 112px;
+ background-size: 100% 100%;
+}
+.competitive-inner.reverse-con .competitive-inner-right {
+ padding: 20px 0px 0 0px;
+}
+section.competitive-outer {
+ padding: 10px 0 20px;
+}
+.banner-outer {
+ padding: 65px 0px 50px;
+ margin: 0 0 30px;
+}
+}
+ @media screen and (max-width:639px) {
+h2.title-outer {
+ font-size: 26px;
+ line-height: 34px;
+}
+h3.sub-title {
+ font-size: 20px;
+}
+.potential-outer {
+ background-size: 100% 75%;
+}
+.banner-inner p {
+ font-size: 16px;
+ line-height: 26px;
+}
+.banner-outer {
+ padding: 45px 0px 50px;
+ margin: 0 0 30px;
+}
+}
+ @media screen and (max-width:479px) {
+ .banner-inner h1 br {
+ display:none;
+}
+.banner-inner h1 {
+ font-size: 23px;
+ line-height: 33px;
+}
+ .banner-outer {
+ padding: 45px 0px 30px;
+ margin: 0 0 30px;
+ background-size: 100% 24%;
+}
+h2.title-con1 {
+ font-size: 22px;
+ line-height: 32px;
+}
+ h2.title-outer {
+ font-size: 22px;
+ line-height: 30px;
+}
+h3.sub-title {
+ font-size: 18px;
+ margin: 10px 0 10px;
+}
+.elevation-slider {
+ padding: 20px 0 0;
+}
+.potential-outer {
+ background-size: 100% 79%;
+}
+.video-con {
+ margin: 13px 0 0;
+}
+.competitive-inner-right h2.title-outer {
+ line-height: 30px;
+}
+section.streamline-outer {
+ padding: 0px 0 20px;
+}
+.estate-outer {
+ padding: 20px 0 20px;
+}
+.designs {
+ column-count: 1;
+ margin: 20px 0 0 !important;
+}
+.designs li {
+ margin: 12px 0;
+}
+ .review-slider::after {
+ bottom: 20px;
+}
+.bussiness-outer {
+ padding: 10px 20px 30px;
+ margin: 0 0 -120px;
+}
+}
