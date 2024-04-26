@@ -175,6 +175,7 @@ $("body").on('click', '.use-as-input-image', async function () {
         },
         data: { 
             imageURL: croppedImage,
+            _token: $('meta[name="csrf-token"]').attr('content'),
         },
         success: function (response) {
             croppedImage = 'data:image/png;base64,' + response.b64image;
