@@ -41,6 +41,9 @@ Route::post('failed_response_data', [PrecisionController::class, 'failedResponse
 Route::post('runpod/precision', [PrecisionController::class, 'runpodPrecion'])->name('runpod.precision');
 
 Route::get('in-painting-designs', [PrecisionController::class, 'getInPaintingDesigns'])->name('inpainting.designs');
+Route::get('get-base64', [PrecisionController::class, 'downloadFile'])->name('file.download');
+Route::post('getBase64ImageUrl', [PrecisionController::class, 'getBase64ImageUrl'])->name('getBase64Image.Url');
+
 
 
 require __DIR__.'/auth.php';

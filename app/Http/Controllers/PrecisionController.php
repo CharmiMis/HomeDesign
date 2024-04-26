@@ -308,4 +308,37 @@ class PrecisionController extends Controller
             ], 500);
         }
     }
+
+    public function downloadFile(Request $request)
+    {
+
+        try {
+
+            $path = $request->source;
+            $type = pathinfo($path, PATHINFO_EXTENSION);
+            $data = file_get_contents($path);
+            $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
+
+            return response()->json([
+                'status' => true,
+                'data' => [
+                    'base64' => $base64
+                ]
+            ]);
+
+            //code...
+        } catch (\Throwable $th) {
+            report($th);
+            return response()->json([
+                'status' => false,
+                'data' => []
+            ], 500);
+        }
+    }
+
+    public function getBase64ImageUrl(Request $request)
+    {
+        $b64image = base64_encode(file_get_contents($request->imageURL));
+        return response()->json(['b64image' => $b64image]);
+    }
 }

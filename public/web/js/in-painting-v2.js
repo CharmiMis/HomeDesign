@@ -170,7 +170,12 @@ $("body").on('click', '.use-as-input-image', async function () {
     $.ajax({
         type: 'POST',
         url: routeURL,
-        data: { imageURL: croppedImage },
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        data: { 
+            imageURL: croppedImage,
+        },
         success: function (response) {
             croppedImage = 'data:image/png;base64,' + response.b64image;
             loadImageToStage(croppedImage);
@@ -1137,6 +1142,7 @@ $(document).on('click', '.page-link', function () {
 });
 
 function getInPaintingGeneratedDesigns() {
+    console.log(get_designs);
     var response = null;
     // let paintingDesignUrl = $('#getInPaintingDesigns').data('url');
     $.ajax({

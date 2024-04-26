@@ -18,6 +18,9 @@
         href="{{ asset('web/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('web/css/animate.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('web/css/jquery-ui.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('web/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('web/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Your custom CSS -->
     <style>
         .konvajs-content {
@@ -26,6 +29,15 @@
 
         .uploadInPaintingImage {
             max-width: 100%;
+        }
+        #clearall{
+            display: inline !important;
+        }
+        #promptInput0, #promptInput1, #promptInput2
+        {
+            background: #41326a;
+            border: 1px solid #352c52;
+            color: #fff;
         }
 
         /* Add your other custom styles here */
@@ -107,7 +119,7 @@
                                     </div>
                                     <div class="undo-redo-btn">
                                         <button class="ci-btn ci-btn-danger" id="ip-clearImage" title="Clear All">
-                                            <img src="{{asset('web/images/deleteIcon.png')}}" width="25px"> Clear all
+                                            <img src="{{asset('web/images/deleteIcon.png')}}" width="25px" id="clearall"> Clear all
                                         </button>
                                         <button class="ci-btn ci-btn-danger" id="ip-undoImage" title="Undo"><img src="{{asset('web/images/undo.png')}}" width="25px"></button>
                                         <button class="ci-btn ci-btn-danger" id="ip-redoImage" title="Redo"><img src="{{asset('web/images/redo.png')}}" width="25px"></button>
@@ -577,7 +589,28 @@
             </div>
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade modal-design-preview" id="modalImagePreview" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <div class="mdp-container">
+                    <div class="mdp-img">
+                        <img class="" id="mip">
+                    </div>
+                    <div class="mdp-cl-btn">
+                        <span  data-bs-dismiss="modal">
+                        <i class="fa fa-times fa-unset" aria-hidden="true"></i>
+                        </span>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
     <div id="routeToGetFailedResp" data-route="{{ route('failed_response.data') }}"></div>
+    <div id="routeToGetBase64Image" data-route="{{ route('getBase64Image.Url') }}"></div>
 </x-app-layout>
 </body>
         <script>
@@ -599,7 +632,6 @@
     <script src="{{ asset('web/js/in-painting-v2.js') }}"></script>
     <script>
         async function loadRenders(sec) {
-
             this.multipleDownloadImg = [];
             $(`.delete_button`).addClass('hidden');
             $(`.add_to_project_btn`).addClass('hidden');
