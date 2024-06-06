@@ -32,7 +32,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/precision', function () {
     return view('precision.index');
-})->name('precision.index');
+})->middleware(['auth', 'verified'])->name('precision.index');
 
 Route::get('user/get-projects', [PrecisionController::class, 'getProjects'])->name('user.get-projects');
 Route::get('user/get-subprojects', [PrecisionController::class, 'getSubProjects'])->name('user.get-subprojects');
