@@ -101,7 +101,6 @@ class PrecisionController extends Controller
     }
 
     public function runpodPrecion(Request $request){
-
         $payloadData = $request->all();
         $payloadImage = json_decode($request->payload, true);
         $prompt = $payloadImage['prompt'];
@@ -128,7 +127,7 @@ class PrecisionController extends Controller
                 "mask_image" => $googleStorageFileMaskUrl['url'],
                 "design_type" => intval($payloadData['designtype']),
                 "room_type" => $payloadData['roomtype'],
-                "design_style" => $payloadData['design_style'],
+                "design_style" => strtolower($payloadData['design_style']),
                 "prompt" => !empty($payloadImage['prompt']) ? $payloadImage['prompt'] : "",
                 "no_design" => intval($payloadData['no_of_Design']),
                 "segment_type" => $segmentType,
