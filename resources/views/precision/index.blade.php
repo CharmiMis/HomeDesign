@@ -377,27 +377,27 @@
                                                 <label class="nwfile-tiTle">Select Style</label>
                                                 <select class="nwfiles-optns" id="promptInputDesign2">
                                                     <option id="No_Style" value="No Style">No Style - Image Improvment Only</option>
-                                                    <option id="Modern_Garden" selected="" value="Modern Garden">Modern</option>
-                                                    <option id="City_Garden" value="City Garden">City</option>
-                                                    <option id="Contemporary_Garden" value="Contemporary Garden">Contemporary</option>
-                                                    <option id="Luxury_Garden" value="Luxury Garden">Luxury</option>
-                                                    <option id="Apartment_Garden" value="Apartment Garden">Apartment</option>
-                                                    <option id="Small_Garden" value="Small Garden">Small</option>
-                                                    <option id="Vegetable_Garden" value="Vegetable Garden">Vegetable</option>
-                                                    <option id="Low__Budget_Garden" value="Low Budget Garden">Low Budget</option>
-                                                    <option id="Beach_Garden" value="Beach Garden">Beach</option>
-                                                    <option id="Wedding_Garden" value="Wedding Garden">Wedding</option>
-                                                    <option id="Rural_Garden" value="Rural Garden">Rural Garden</option>
-                                                    <option id="Mediterranean_Garden" value="Mediterranean Garden">Mediterranean</option>
-                                                    <option id="Restaurant_Garden" value="Restaurant Garden">Restaurant Garden</option>
-                                                    <option id="Formal_Garden" value="Formal Garden">Formal</option>
-                                                    <option id="American_Garden" value="American Garden">American</option>
-                                                    <option id="English_Garden" value="English Garden">English</option>
-                                                    <option id="Traditional_Green" value="Traditional Garden">Traditional</option>
-                                                    <option id="Christmas_Garden" value="Christmas Garden">Christmas</option>
-                                                    <option id="Meditation_Garden" value="Meditation Garden">Meditation</option>
-                                                    <option id="Coastal_Garden" value="Coastal Garden">Coastal</option>
-                                                    <option id="Tropical_Garden" value="Tropical Garden">Tropical</option>
+                                                    <option id="Modern_Garden" selected="" value="Modern">Modern</option>
+                                                    <option id="City_Garden" value="City">City</option>
+                                                    <option id="Contemporary_Garden" value="Contemporary">Contemporary</option>
+                                                    <option id="Luxury_Garden" value="Luxury">Luxury</option>
+                                                    <option id="Apartment_Garden" value="Apartment">Apartment</option>
+                                                    <option id="Small_Garden" value="Small">Small</option>
+                                                    <option id="Vegetable_Garden" value="Vegetable">Vegetable</option>
+                                                    <option id="Low__Budget_Garden" value="Low Budget">Low Budget</option>
+                                                    <option id="Beach_Garden" value="Beach">Beach</option>
+                                                    <option id="Wedding_Garden" value="Wedding">Wedding</option>
+                                                    <option id="Rural_Garden" value="Rural">Rural Garden</option>
+                                                    <option id="Mediterranean_Garden" value="Mediterranean">Mediterranean</option>
+                                                    <option id="Restaurant_Garden" value="Restaurant">Restaurant Garden</option>
+                                                    <option id="Formal_Garden" value="Formal">Formal</option>
+                                                    <option id="American_Garden" value="American">American</option>
+                                                    <option id="English_Garden" value="English">English</option>
+                                                    <option id="Traditional_Green" value="Traditional">Traditional</option>
+                                                    <option id="Christmas_Garden" value="Christmas">Christmas</option>
+                                                    <option id="Meditation_Garden" value="Meditation">Meditation</option>
+                                                    <option id="Coastal_Garden" value="Coastal">Coastal</option>
+                                                    <option id="Tropical_Garden" value="Tropical">Tropical</option>
                                                 </select>
                                             </div>
                                             <div class="mt-2">
