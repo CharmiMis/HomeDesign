@@ -12,6 +12,17 @@ class Authenticate extends Middleware
      */
     protected function redirectTo(Request $request): ?string
     {
-        return $request->expectsJson() ? null : route('login');
+        $currentRoute = '';
+        $currentUrl = url()->current();
+        if (strpos($currentUrl, 'redesign') !== false) {
+            $currentRoute = 'login';
+        } elseif (strpos($currentUrl, 'precision') !== false) {
+            $currentRoute = 'login.pricision';
+        } elseif (strpos($currentUrl, 'paint-visualizer') !== false) {
+            $currentRoute = 'login.paintVisulizer';
+        }else{
+            $currentRoute = 'login';
+        }
+        return $request->expectsJson() ? null : route($currentRoute);
     }
 }

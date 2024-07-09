@@ -63,6 +63,6 @@ Route::get('get-designs', [PrecisionController::class, 'getDesigns'])->name('web
 Route::post('runpod/beautiful_redesign', [PrecisionController::class, 'runpodBeautifulRedesign'])->name('runpod.beautiful_redesign');
 
 Route::post('runpod/paint-visualizer', [PrecisionController::class, 'runpodColorSwapTransfer'])->name('runpod.color_swap');
-Route::get('/paint-visualizer', [PrecisionController::class, 'paintVisulizerIndex'])->name('colorSwap.Index');
+Route::get('/paint-visualizer', [PrecisionController::class, 'paintVisulizerIndex'])->middleware(['auth', 'verified'])->name('colorSwap.Index');
 
 require __DIR__.'/auth.php';

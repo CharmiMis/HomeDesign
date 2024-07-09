@@ -71,6 +71,19 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        $previousUrl = url()->previous();
+        $currentRoute = '/'; // default route
+
+        if (strpos($previousUrl, 'redesign') !== false) {
+            $currentRoute = 'login';
+        } elseif (strpos($previousUrl, 'precision') !== false) {
+            $currentRoute = 'login-pricision';
+        } elseif (strpos($previousUrl, 'paint-visualizer') !== false) {
+            $currentRoute = 'login-paintVisulizer';
+        } else {
+            $currentRoute = 'login';
+        }
+
+        return redirect($currentRoute);
     }
 }
