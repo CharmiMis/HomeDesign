@@ -45,12 +45,13 @@
                         <span>Customise and Generate</span>
                     </li>
                 </ul>
-                <a href="javascript:void(0)" onclick="loadVideoModal()">
-                    <img src="{{ asset('web2/images/video-tutorial.svg') }}">
-                    <span>Video Tutorial</span>
-                </a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">
+                        <span>Log Out</span>
+                    </a>
+                </form>
             </div>
-
             <div class="gs-dashboard-notice upload-image-container">
                 <div class="gs-dashboard-notice-info">
                     <img src="{{ asset('web2/images/info-icon.svg') }}">
@@ -100,10 +101,12 @@
                         <span>Customise and Generate</span>
                     </li>
                 </ul>
-                <a href="javascript:void(0)" onclick="loadVideoModal()">
-                    <img src="{{ asset('web2/images/video-tutorial.svg') }}">
-                    <span>Video Tutorial</span>
-                </a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">
+                        <span>Log Out</span>
+                    </a>
+                </form>
             </div>
 
             <div class="image-show-container image-mask-container">

@@ -44,10 +44,12 @@
                         <span>Customise and Generate</span>
                     </li>
                 </ul>
-                <a href="javascript:void(0)" onclick="loadVideoModal()">
-                    <img src="{{ asset('web2/images/video-tutorial.svg') }}">
-                    <span>Video Tutorial</span>
-                </a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">
+                        <span>Log Out</span>
+                    </a>
+                </form>
             </div>
 
                 <div class="gs-dashboard-notice upload-image-container">
@@ -101,10 +103,12 @@
                     <input type="checkbox" id="toggle-btn-2" class="toggle-btn" {{ auth()->user()->light_mode == 0 ? 'checked' : '' }}>
                     <label for="toggle-btn-2"></label>
                 </div> --}}
-                <a href="javascript:void(0)" onclick="loadVideoModal()">
-                    <img src="{{ asset('web2/images/video-tutorial.svg') }}">
-                    <span>Video Tutorial</span>
-                </a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">
+                        <span>Log Out</span>
+                    </a>
+                </form>
             </div>
 
             <div class="ai-tool-right-top top-menu-bar-third" style="display: none">
@@ -133,10 +137,12 @@
                     <input type="checkbox" id="toggle-btn-3" class="toggle-btn" {{ auth()->user()->light_mode == 0 ? 'checked' : '' }}>
                     <label for="toggle-btn-3"></label>
                 </div> --}}
-                <a href="javascript:void(0)" onclick="loadVideoModal()">
-                    <img src="{{ asset('web2/images/video-tutorial.svg') }}">
-                    <span>Video Tutorial</span>
-                </a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">
+                        <span>Log Out</span>
+                    </a>
+                </form>
             </div>
 
             <div class="image-show-container image-mask-container">

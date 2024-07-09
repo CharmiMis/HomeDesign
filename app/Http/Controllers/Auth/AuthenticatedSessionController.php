@@ -29,7 +29,35 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        return redirect()->intended(RouteServiceProvider::BEAUTIFUL_REDESIGN);
+    }
+
+    public function createPricision() : View
+    {
+        return view('auth.precision-login');
+    }
+
+    public function storePricision(LoginRequest $request): RedirectResponse
+    {
+        $request->authenticate();
+
+        $request->session()->regenerate();
+
+        return redirect()->intended(RouteServiceProvider::PRECISION);
+    }
+
+    public function createPaintVisualizer() : View
+    {
+        return view('auth.paintVisualizer-login');
+    }
+
+    public function storePaintVisualizer(LoginRequest $request): RedirectResponse
+    {
+        $request->authenticate();
+
+        $request->session()->regenerate();
+
+        return redirect()->intended(RouteServiceProvider::PAINT_VISULIZER);
     }
 
     /**

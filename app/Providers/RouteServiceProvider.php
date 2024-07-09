@@ -18,6 +18,9 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     public const HOME = '/dashboard';
+    public const BEAUTIFUL_REDESIGN = '/redesign';
+    public const PRECISION = '/precision';
+    public const PAINT_VISULIZER = '/paint-visualizer';
 
     /**
      * Define your route model bindings, pattern filters, and other route configuration.

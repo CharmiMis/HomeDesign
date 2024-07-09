@@ -22,6 +22,32 @@ Route::middleware('guest')->group(function () {
 
     Route::post('login', [AuthenticatedSessionController::class, 'store']);
 
+    //Login Register For precision feature Start
+
+    Route::get('login-pricision', [AuthenticatedSessionController::class, 'createPricision'])
+    ->name('login.pricision');
+
+    Route::post('login-pricision', [AuthenticatedSessionController::class, 'storePricision']);
+
+    Route::get('register-pricision', [RegisteredUserController::class, 'createPricision'])
+                ->name('register.pricision');
+
+    Route::post('register-pricision', [RegisteredUserController::class, 'storePricision']);
+    //Login Register For precision feature End
+
+    //Login Register For Paint Visualizer feature Start
+
+    Route::get('login-paintVisulizer', [AuthenticatedSessionController::class, 'createPaintVisualizer'])
+    ->name('login.paintVisulizer');
+
+    Route::post('login-paintVisulizer', [AuthenticatedSessionController::class, 'storePaintVisualizer']);
+
+    Route::get('register-paintVisulizer', [RegisteredUserController::class, 'createPaintVisualizer'])
+                ->name('register.paintVisulizer');
+
+    Route::post('register-paintVisulizer', [RegisteredUserController::class, 'storePaintVisualizer']);
+    //Login Register For Paint Visualizer feature End
+
     Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])
                 ->name('password.request');
 

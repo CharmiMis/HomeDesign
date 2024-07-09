@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PrecisionController;
 use App\Http\Controllers\ProfileController;
@@ -47,8 +48,8 @@ Route::post('getBase64ImageUrl', [PrecisionController::class, 'getBase64ImageUrl
 
 //New design Routes
 Route::post('runpod/getMasking', [PrecisionController::class, 'runpodGetMasking'])->name('runpod.getmasking');
-Route::get('precision', [PrecisionController::class, 'inPainting'])->middleware(['auth', 'verified'])->name('user.in-painting');
 Route::get('redesign', [PrecisionController::class, 'redesign'])->middleware(['auth', 'verified'])->name('user.redesign');
+Route::get('precision', [PrecisionController::class, 'inPainting'])->middleware(['auth', 'verified'])->name('user.in-painting');
 Route::get('fill-spaces',[PrecisionController::class,'fillSpaces'])->middleware(['auth', 'verified'])->name('user.fill-spaces');
 Route::post('getFullHd', [PrecisionController::class, 'getFullHdData'])->name('getHdImages');
 Route::post('imageDelete', [PrecisionController::class, 'imageDelete'])->name('image.delete');
