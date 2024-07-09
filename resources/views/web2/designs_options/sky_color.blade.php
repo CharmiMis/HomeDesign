@@ -1,0 +1,11 @@
+<option value="Sunshine Color">Sunshine</option>
+<option value="Clear Sky">Clear Sky</option>
+{{-- <option value="Sunrise">Sunrise</option> --}}
+<option value="Rainy">Rainy</option>
+<option value="Cloudy">Cloudy</option>
+<option value="Windy">Windy</option>
+<option value="Dawn">Dawn</option>
+<option value="Dusk">Dusk</option>
+<option value="Twilight">Twilight</option>
+<option value="Sunny">Sunny</option>
+<option value="Night">Night</option>

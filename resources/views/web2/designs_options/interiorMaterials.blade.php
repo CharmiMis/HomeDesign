@@ -1,0 +1,11 @@
+<option value="" selected>Select Interior Materials</option>
+<option value="Fabrics">Fabrics</option>
+<option value="Glass">Glass</option>
+<option value="Wood">Wood</option>
+<option value="Stone">Stone</option>
+<option value="Metal">Metal</option>
+<option value="Ceramics and Porcelain">Ceramics and Porcelain</option>
+<option value="Plastics and Polymers">Plastics and Polymers</option>
+<option value="Paper and Cardboard">Paper and Cardboard</option>
+<option value="Natural Fibers">Natural Fibers</option>
+<option value="Composite Materials">Composite Materials</option>
