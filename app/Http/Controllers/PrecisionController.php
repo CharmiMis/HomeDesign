@@ -257,7 +257,8 @@ class PrecisionController extends Controller
     }
 
     public function serverLessCurlRequests($url,$payload){
-        $bearer_token = "64V8P6UDM32OR1YJF0YXZOQX1BRI6HOQ0ZVDR67A";
+        set_time_limit(320);
+        $bearer_token = config('app.RUNPOD_SERVERLESS_TOKEN');
 
         $headers = [
             'Authorization: Bearer ' . $bearer_token,
@@ -269,9 +270,14 @@ class PrecisionController extends Controller
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($payload));
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-
+        curl_setopt($ch, CURLOPT_TIMEOUT, 320);
         $response = curl_exec($ch);
+        $error = curl_error($ch);
         $http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+        if($error == CURLE_OPERATION_TIMEDOUT) {
+            return ['success' => false, "message" => 'Maximum Execution timeout Error'];
+        }
         if ($http_status == 200) {
             $data = json_decode($response, true);
             return $data;
