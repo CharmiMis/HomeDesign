@@ -83,7 +83,7 @@
                         <img src="{{ asset('web2/images/back-btn-icon.svg') }}">
                         <img class="light-mode" src="{{ asset('web2/images/light-mode/back-btn-icon.svg') }}">
                     </a>
-                    <h3 class="font22">Precision +</h3>
+                    <h3 class="font22">Fill Spaces</h3>
                 </div>
                 <ul>
                     <li class="active first_tab_active">
@@ -117,7 +117,7 @@
                         <img src="{{ asset('web2/images/back-btn-icon.svg') }}">
                         <img class="light-mode" src="{{ asset('web2/images/light-mode/back-btn-icon.svg') }}">
                     </a>
-                    <h3 class="font22">Precision +</h3>
+                    <h3 class="font22">Fill Spaces</h3>
                 </div>
                 <ul>
                     <li class="active first_tab_active">
