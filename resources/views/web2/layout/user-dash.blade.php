@@ -1154,8 +1154,6 @@
         }
 
         function selectModeType(modeType, sec) {
-            console.log(modeType);
-            console.log(sec);
             $(`.gs-select-room-style-single[data-room-type="${modeType}"][onclick*="(${modeType},${sec})"]`).removeClass('active');
             $(`.gs-select-room-style-single[data-room-type="${modeType}"][onclick*="(${modeType},${sec})"]`).addClass('active');
             document.getElementById('selectedModeType' + sec).value = modeType;
@@ -1163,45 +1161,6 @@
 
     </script>
     <script>
-        $('.toggle-btn').change(function() {
-            var lightMode = $(this).is(':checked') ? 0 : 1;
-
-            if (lightMode === 0) {
-                enableDarkMode();
-            } else {
-                enableLightMode();
-            }
-
-            // Perform AJAX call to save the state in the database
-            $.ajax({
-                url: '/update-color-mode', // Your route to handle the update
-                method: 'POST',
-                data: {
-                    _token: $('meta[name="csrf-token"]').attr('content'), // Include CSRF token for security
-                    light_mode: lightMode
-                },
-                success: function(response) {
-                    console.log('Color mode updated successfully');
-                },
-                error: function(error) {
-                    console.log('Error updating light mode');
-                }
-            });
-        });
-
-        function enableDarkMode() {
-            console.log("Dark mode enabled");
-            // Additional dark mode logic here
-            // Remove light-theme class if it exists
-            $('body').removeClass('light-theme');
-        }
-
-        function enableLightMode() {
-            console.log("Light mode enabled");
-            // Additional light mode logic here
-            $('body').addClass('light-theme');
-        }
-
         $(".ai-tool-search").click(function() {
             $(".ai-tool-wrapper").toggleClass("slide-close");
         });

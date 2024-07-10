@@ -268,7 +268,7 @@
                                                                         src="{{ asset('web2/images/select-room-type10.png') }}">
                                                                     <span>Beautiful Redesign</span>
                                                                 </div>
-                                                                <div class="gs-select-room-style-single"
+                                                                {{-- <div class="gs-select-room-style-single"
                                                                     data-room-type="Creative Redesign"
                                                                     onclick="selectModeType('Creative Redesign',0)">
                                                                     <img
@@ -281,7 +281,7 @@
                                                                     <img
                                                                         src="{{ asset('web2/images/select-room-type11.png') }}">
                                                                     <span>Sketch to Render</span>
-                                                                </div>
+                                                                </div> --}}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -517,7 +517,7 @@
                                                                         src="{{ asset('web2/images/select-room-type10.png') }}">
                                                                     <span>Beautiful Redesign</span>
                                                                 </div>
-                                                                <div class="gs-select-room-style-single"
+                                                                {{-- <div class="gs-select-room-style-single"
                                                                     data-room-type="Creative Redesign"
                                                                     onclick="selectModeType('Creative Redesign',1)">
                                                                     <img
@@ -530,7 +530,7 @@
                                                                     <img
                                                                         src="{{ asset('web2/images/select-room-type11.png') }}">
                                                                     <span>Sketch to Render</span>
-                                                                </div>
+                                                                </div> --}}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -774,7 +774,7 @@
                                                                         src="{{ asset('web2/images/select-room-type10.png') }}">
                                                                     <span>Beautiful Redesign</span>
                                                                 </div>
-                                                                <div class="gs-select-room-style-single"
+                                                                {{-- <div class="gs-select-room-style-single"
                                                                     data-room-type="Creative Redesign"
                                                                     onclick="selectModeType('Creative Redesign',2)">
                                                                     <img
@@ -787,7 +787,7 @@
                                                                     <img
                                                                         src="{{ asset('web2/images/select-room-type10.png') }}">
                                                                     <span>Sketch to Render</span>
-                                                                </div>
+                                                                </div> --}}
                                                                 
                                                             </div>
                                                         </div>
@@ -1100,7 +1100,6 @@
         $(document).ready(function() {
             var dropdownValue = localStorage.getItem('dropdownValue');
             if (dropdownValue) {
-                console.log('dropdownValue',dropdownValue);
                 selectModeType(dropdownValue, 0);
                 localStorage.removeItem('dropdownValue');
             }

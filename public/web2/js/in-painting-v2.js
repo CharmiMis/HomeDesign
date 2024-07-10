@@ -968,8 +968,6 @@ async function callInPaintingAPI(sec,el) {
         }
         throw 'Server error';
     }).then(result => {
-        console.log("result",result);
-
         var generatedImageList = ''
         var resultJsonFormat = JSON.parse(result);
         if(resultJsonFormat.status === false){
@@ -986,8 +984,6 @@ async function callInPaintingAPI(sec,el) {
                 },
                 success: function (result) {
                     generatedImageList = result['Sucess']['generated_image'];
-                    console.log("generatedImageList",generatedImageList);
-
                     originalImage = result['Sucess']['original_image'];
                     let storedIds = result['storedIds'];
                     enableGenerateButton(generateDesignBtn, spinner,tabs,previousPageButton);
@@ -1030,7 +1026,6 @@ async function callInPaintingAPI(sec,el) {
             });
         }else{
             generatedImageList = resultJsonFormat.Sucess.generated_image;
-            console.log("generatedImageList",generatedImageList);
             originalImage = resultJsonFormat.Sucess.original_image;
             let storedIds = resultJsonFormat.storedIds;
             enableGenerateButton(generateDesignBtn, spinner,tabs,previousPageButton);
@@ -1941,7 +1936,6 @@ $(document).on('click', '.precision-ultra-enhancer', async function () {
 });
 
 function generatedInPaintingItem(item){
-    console.log("item",item);
     var temp = document.getElementById("inPaintingCard");
     var clone = temp.content.cloneNode(true);
     // var inputImg = clone.querySelector('[data-item="input-image"]');
@@ -2720,8 +2714,6 @@ function mergeImages() {
     // Set the dimensions of the merged canvas
     mergedCanvas.width = scaledWidth;
     mergedCanvas.height = scaledHeight;
-    console.log("Canvas", mergedCanvas, mainImage.width * mainImage.scaleX, mainImage.height * mainImage.scaleY, mainImage);
-    console.log(`Merged canvas dimensions: ${width}x${height}`);
     // Draw each image onto the merged canvas within the bounding box
     objects.forEach((obj) => {
         const left = obj.left || 0;
@@ -2888,7 +2880,6 @@ function mergeMaskImages() {
 
 function keepObjectInBounds(obj) {
     var movingObject = obj.target;
-    console.log(movingObject);
     // Check if the moving object is an image
     // if (movingObject.type === 'image') {
         // Get the boundaries of the main image
@@ -3288,7 +3279,6 @@ function handleInverseTransformation(eventData, transform) {
 
     // Determine the direction of reversal based on control type (e.g., 'inverse-horizontal' or 'inverse-vertical')
     var controlType = transform.corner;
-    console.log(controlType);
     var isHorizontal = controlType === 'inverseHorizontal';
     var isVertical = controlType === 'inverseVertical';
 
@@ -3378,7 +3368,6 @@ async function generateRoomComposer(sec,el){
         return;
     }
 
-    console.log($(".custom_added_elements").length, $(".existing_elements").length)
     // if($(".custom_added_elements").length <= 0 || $(".existing_elements").length <= 0){
     //     alert("Please upload custom elements to proceed.");
     //     return false;
@@ -3387,7 +3376,6 @@ async function generateRoomComposer(sec,el){
     $("#submit").css("display","inline-block");
     let mergedImages = mergeImages();
     let mergedMaskedImages = mergeMaskImages();
-    console.log(mergedImages.toDataURL(), mergedMaskedImages.toDataURL());
     if(!mergedImages){
         $("#submit").css("display","none");
         return false;

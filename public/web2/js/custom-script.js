@@ -651,7 +651,6 @@ function updateFastSpring(userDetail = null) {
 }
 
 function previewImage(beforeSrc,afterSrc) {
-    console.log("previewImage");
     $("#modalImagePreview").modal('show')
     $("#mip_before").attr('src', beforeSrc);
     $("#mip_after").attr('src', afterSrc);
@@ -2420,7 +2419,6 @@ function deleteProject(projectID) {
     $("#confirm_project_modal").modal('show');
 
     $(".yes-confirm-project-modal").off('click').on('click', function() {
-        console.log('hiii');
         $.ajax({
             url: deleteRoute.replace('__ID__', projectID),
             type: "POST",
@@ -2999,7 +2997,6 @@ function generatedRedesignItem(item) {
     }
 
     if (item.hd_image == 1) {
-        console.log('item.hd_image',item.hd_image);
         hdImageDiv.style.display = 'flex';
         fullHdBtn.style.display = 'none';
     } else {
@@ -3418,7 +3415,6 @@ $('.third_tab_active').click(function () {
                 $('#errorModal').modal('show');
                 return;
             }
-        console.log("HERE",$(".custom_added_elements").length, $(".existing_elements").length );
         if($(".custom_added_elements").length <= 0 && $(".existing_elements").length <= 0){
             let error_message = 'Please upload custom elements to proceed.';
             $('#errorModal h4').text(error_message);
