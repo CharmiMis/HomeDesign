@@ -267,7 +267,7 @@
                                         <div class="color-picker-sectopn">
                                             <p>Use color picker :</p>
                                             <div class="custom-color-picker">
-                                                <img src="{{ asset('web/images/color-wheel.png') }}" alt="">
+                                                <img src="{{ asset('web2/images/color-wheel.png') }}" alt="">
                                                 <input type="color" id="colorPicker">
                                                 <input type="hidden" id="colorPickerValue" value="">
                                             </div>
